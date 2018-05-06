@@ -1,23 +1,27 @@
 sudo: required
 dist: trusty
-
 addons:
   apt:
     sources:
-      - google-chrome
+    - google-chrome
     packages:
-      - google-chrome-stable
-
+    - google-chrome-stable
 cache:
   yarn: true
-
 language: node_js
 node_js:
-  - "8"
-
+- '8'
 install:
-  - yarn
-
+- yarn
 script:
-  - yarn test
+- yarn test
+- yarn build
+- ls -la dist/
+- ls -al dist/snapcontrol
+- docker build -t .
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
+env:
+  global:
+  - secure: gFxx6geaFzY5miipnc17LlCvuU2HrCKB38wJfPSOV5mOALF7oz0rw+NOKeySnaqH0GznWZtJu6rWPRSaXadZck7Keq8lfOushpf7YbppKVTa2yjjN/E5kQc3b1L77ep76o6+mJlX1QlO+2nZMVQmClHcyEvpEFfryIasRvayxWfLmEVs96MHsmhcAIQzfrfjokoW4quOcc43nbV0L/CcbaibBf0OnM3/zHJqzqxNXxo2bKwJ4LHCKw9DhdrB0bJjFx4ZOeIKDS2EnQFAUqKE33XQ5PAT6860wjdRrEPR4QQ43VB5uAh4R9BB/qTDREAHFGlcQrPIAPpHqWaIRq33548Wq0neTAjdIsCe1OEY1/f+rr54CgmX/QodQkP0DMczsdJAwK/607qnPtter67fri20MA8qQuRhF2WvHp0EvhtN6hWm0DhoDay4G1Uo8cUaaOTzk9iaV6Ck58kNYsEkRPB47H5/SC0r2YrlWu2/0Fmajlobp49PAdPeMHJl0iDrcDeMQp6qdY1nAj0Ic1uLdMCvboI3xj+q7iNAgHzPqyaFpT+cStWdsvcbzESXtq7dTZzKFMGaQPFL+wRZ3fS4KXRGiXaeZa4VUZ9Mmt7D3qd3x02oKW5lmZ1+NeW/CgKKNiQlMbfyW82ka3wGJbRSjzSj5HmLlyazK92koXNLwEo=
+  - secure: FleWHZu+az81maj9FR9IqL5I+nEIX5M7AG5/kpnaWTBkFBZo+P6huzOEMdbXsOqZGVxIYFewumwK9audayymhXaB3AHsRZ/+oY9AYJNLdJ8BmiklmhgqvDFCyVW/mmW2sA3BMCXynVpJnM6VhMoLDCMgVaJgHV2fCuqaY1b4mOp+JV/5a6rIu2PZAEcGdTWJhCxvZ6uPgG83gHGMFen5GSBcA0I0MBYVz1J925HITtX8hJgGF/WAt495YGrZF1b7YtpbA6L9uhfNxNfHT2VBFEYLoXfeSTD848q9XP4uAXV+1Ue8mmhe5/GMf8oRx0IZwUpZbinsaFZ4QBHwIseX0LEIq4pnFCMWbgDQQQWBzd9kuU9PMabz2DGlrgb4Aba+7g3y4jwUTB/FR3lgyGhi7/k1m+8wCjNQvkA11Pt4glexcZZXri+OrjD+oV9vQrbRTIyFB1vPkP2IS5v3Uqiuld/Kftc9NXHcVJnGlK0A9oIXLTqnSIKHymorDXmqIMXpuCgkg2w5WgIs+1p4gfi1Wp2rpbHeo5nkQnj5yUcxemzxejy3lhDcgRL5ayTNPWZ+9fkjZaj4Rz+FyD+qfb74oJLGqm9QTfCeI06u2v55ebRHw1tFS+KiWNMHe82LNCq/5RV0cGrlztx3nkqXslmdUG7I+hOIqmx9l09n1KrjXhY=
