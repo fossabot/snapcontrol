@@ -1,3 +1,3 @@
-FROM node:8.11.1-alpine
+FROM nginx:alpine
 
-RUN echo "Hello world"
+COPY dist/snapcontrol /usr/share/nginx/html

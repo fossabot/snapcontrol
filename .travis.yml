@@ -1,4 +1,6 @@
 sudo: required
+services:
+  - docker
 dist: trusty
 addons:
   apt:
@@ -18,8 +20,9 @@ script:
 - yarn build
 - ls -la dist/
 - ls -al dist/snapcontrol
-- docker build -t .
+- docker build -t jaedle/snapcontrol:latest .
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push jaedle/snapcontrol:latest
 
 env:
   global:
