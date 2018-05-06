@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker run -d --name redis redis:3.0.7
+  - docker run -d --name postgres -e "POSTGRES_USER=user" -e "POSTGRES_PASSWORD=password" -e "POSTGRES_DB=database" postgres:9.5.3
+  - docker build -t my_app .
+
+script:
