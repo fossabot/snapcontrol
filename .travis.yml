@@ -14,6 +14,7 @@ language: node_js
 node_js:
 - '8'
 install:
+- npm install codecov -g
 - yarn
 script:
 - yarn test
@@ -23,6 +24,8 @@ script:
 - docker build -t jaedle/snapcontrol:latest .
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 - docker push jaedle/snapcontrol:latest
+after_success:
+  - codecov
 
 env:
   global:
