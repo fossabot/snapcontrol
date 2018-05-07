@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/jaedle/snapcontrol.svg?branch=master)](https://travis-ci.org/jaedle/snapcontrol)
 [![dependencies Status](https://david-dm.org/jaedle/snapcontrol/status.svg)](https://david-dm.org/jaedle/snapcontrol)
+[![devDependencies Status](https://david-dm.org/jaedle/snapcontrol/dev-status.svg)](https://david-dm.org/jaedle/snapcontrol?type=dev)
 
 # Snapcontrol
 
