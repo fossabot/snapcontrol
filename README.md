@@ -1,7 +1,11 @@
 [![Build Status](https://travis-ci.org/jaedle/snapcontrol.svg?branch=master)](https://travis-ci.org/jaedle/snapcontrol)
+[![Docker image](https://images.microbadger.com/badges/image/jaedle/snapcontrol.svg)](https://microbadger.com/images/jaedle/snapcontrol "Get your own image badge on microbadger.com")
+
 [![dependencies Status](https://david-dm.org/jaedle/snapcontrol/status.svg)](https://david-dm.org/jaedle/snapcontrol)
 [![devDependencies Status](https://david-dm.org/jaedle/snapcontrol/dev-status.svg)](https://david-dm.org/jaedle/snapcontrol?type=dev)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/35e94aecd21f29dfcd4f/maintainability)](https://codeclimate.com/github/jaedle/snapcontrol/maintainability)
+
 
 
 # Snapcontrol
