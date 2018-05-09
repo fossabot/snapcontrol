@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/jaedle/snapcontrol.svg?branch=master)](https://travis-ci.org/jaedle/snapcontrol)
 [![Docker image](https://images.microbadger.com/badges/image/jaedle/snapcontrol.svg)](https://microbadger.com/images/jaedle/snapcontrol "Get your own image badge on microbadger.com")
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjaedle%2Fsnapcontrol.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjaedle%2Fsnapcontrol?ref=badge_shield)
 
 [![dependencies Status](https://david-dm.org/jaedle/snapcontrol/status.svg)](https://david-dm.org/jaedle/snapcontrol)
 [![devDependencies Status](https://david-dm.org/jaedle/snapcontrol/dev-status.svg)](https://david-dm.org/jaedle/snapcontrol?type=dev)
@@ -35,3 +36,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjaedle%2Fsnapcontrol.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjaedle%2Fsnapcontrol?ref=badge_large)
